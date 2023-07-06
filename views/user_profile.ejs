@@ -1,5 +1,23 @@
 <link rel="stylesheet" href="/css/user_profile.css">
+ 
+<!-- <img src="<%= user.avatar %>" alt="<%= user.name %>" width="100"> -->
 
-   <h1>Placement | <%= title %> </h1>
-   
-<script src="/js/user_profile.js"></script>
+ 
+ <% if(user.id == profile_user.id) {%>
+
+  <p><b>Name  :</b> <%= profile_user.name %> </p>
+  <p><b>Email :</b> <%= profile_user.email %> </p>
+   <!-- if logged in user and requested user is same them allow to edit profile-->
+  <form action="/users/update/<%= profile_user.id %>"  enctype="multipart/form-data" method="post">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="submit" value="Update">
+  </form>
+
+ <%} else {%>
+  <p><b>Name  :</b> <%= profile_user.name %> </p>
+  <p><b>Email :</b> <%= profile_user.email %> </p>
+
+
+ <%}%>
+ 

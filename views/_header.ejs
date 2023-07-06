@@ -1,3 +1,23 @@
+<link rel="stylesheet" href="/css/header.css">
+
 <header>
-    Header
+    <h2><b>&nbsp;&nbsp;CDN Placement Cell</b></h2>
+    <ul>
+        
+               <% if(locals.user) { %>
+                <div class="div-home">
+                <li class="litag">
+                    <b> <a href="/users/profile/<%= locals.user.id %>">
+                        <%= user.name %>
+                    </a></b>&nbsp;&nbsp;&nbsp;&nbsp;
+                </li> 
+                <li class="litag"> <b><a href="/users/sign-out">Sign Out</a></b></li>  &nbsp;&nbsp;
+               </div>
+               <%} else {%>
+                <div class="div-home">              
+                <li class="litag"><b><a href="/users/sign-in">Sign In</a></b></li>&nbsp;&nbsp;&nbsp;&nbsp;
+                <li class="litag"><b><a href="/users/sign-up">Sign Up</a></b></li>&nbsp;&nbsp;
+                </div> 
+               <%}%>
+    </ul>
 </header>

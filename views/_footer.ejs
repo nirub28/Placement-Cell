@@ -1,3 +1,14 @@
+<link rel="stylesheet" href="/css/footer.css">
 <footer>
-    Footer
+    <p>@Copyrights belongs to <b>Niranjan P B</b></p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div>
+        <% if(locals.user) { %>
+        <p> <a href='/'> Home </a>   </p>  
+        <p>  <a href="/users/profile/<%= locals.user.id %>">  Profile</a>  </p>
+        <%}%>
+    </div> 
+     
+    
+
+  
 </footer>
