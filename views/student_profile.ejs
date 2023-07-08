@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/student_profile.css">
+   
+
+<a href="/student/delete/<%= profile_student.id %>"><button>Delete Student</button></a> <button class="update-btn">Update Details</button>
+  <p><b>Name  :</b> <%= profile_student.name %> </p>     
+  <p><b>Email :</b> <%= profile_student.email %> </p>
+  <p><b>College :</b> <%= profile_student.college %> </p>
+  <p><b>Status :</b> <%= profile_student.status %> </p>
+  <p><b>Scores :</b></p>
+    <p class="score-p"><b>DSA :</b><span><%= profile_student.scores.dsa %> ,</span></p>
+    <p class="score-p"><b>WebD :</b><span><%= profile_student.scores.webd %> ,</span></p>
+    <p class="score-p"><b>React :</b> <span><%= profile_student.scores.react %> ,</span></p>
+ 
+    <p><b>Interviews:</b></p>
+ <% profile_student.interviews.forEach(function(interview) { %>
+  <p class="interview-p">
+    <b>Date:</b> <%= interview.date %>,
+    <b>Company:</b> <%= interview.company %>,
+    <b>Result:</b> <%= interview.result %>
+  </p>
+<% }); %>
+  
+ 

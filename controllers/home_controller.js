@@ -1,5 +1,12 @@
-module.exports.home=function(req,res){
+const Student = require('../models/Student');
+
+module.exports.home=async function(req,res){
+
+
+    let students= await Student.find({});
+
     return res.render('home',{
-        title:"Home"
+        title:"Home",
+        all_students:students,
     });
 };

@@ -1,0 +1,38 @@
+.home-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 250px;
+    margin-top: 50px;
+}
+#students-all{
+    border-left: 1px solid red;
+    padding-left: 50px;
+}
+#form-div{
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#input-email{
+    margin-top: 10px;
+}
+input{
+    width: 250px;
+    height: 30px;
+}
+
+#input-add{
+    margin-top: 10px;
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin-left: 130px;
+}
+#input-add:hover{
+    cursor: pointer;
+    color: black;
+}
+
+

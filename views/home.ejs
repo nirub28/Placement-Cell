@@ -1,2 +1,27 @@
+<link rel="stylesheet" href="/css/home.css">
 
-   <h1>Placement | <%= title %> </h1>
+   <div class="home-div">
+
+   <div id="form-div">
+      <h3>Add New Student</h3>
+      <form id="form-container" action="/student/add" method="POST">
+       <div id="input-name">  <input type="text" name="name" placeholder="Enter student name" required> </div>
+       <div id="input-email">  <input type="email" name="email" placeholder="Enter student Email" required> </div>
+        
+         <input id="input-add" type="submit" value="Add Student">
+     </form>
+   </div>
+
+   
+   <section id="students-all">
+      <h4>Students List</h4>
+      <%for(student of all_students) {%>
+          <p>
+                <a href="/student/profile/<%= student._id %>"><%= student.name %></a>
+          </p>
+     <% } %>
+
+
+</section>
+
+</div>

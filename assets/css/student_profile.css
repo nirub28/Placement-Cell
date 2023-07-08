@@ -1,0 +1,34 @@
+button{
+    background-color: red;
+    color: white;
+    width: 120px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 500px;
+}
+button:hover{
+    cursor: pointer;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: white;
+}
+p{
+    margin-left: 20px;
+}
+.update-btn{
+    margin-left: 10px;
+    background-color: green;
+}
+.score-p{
+    margin-left: 80px;
+}
+.interview-p{
+    margin-left: 80px;
+    background-color: red;
+    color: white;
+}
