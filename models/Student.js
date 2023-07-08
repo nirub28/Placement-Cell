@@ -1,4 +1,4 @@
-// const Interview=require('../models/Interview');
+const Interview=require('../models/Interview');
 
 const mongoose = require("mongoose");
 
@@ -42,7 +42,7 @@ const studentSchema = new mongoose.Schema(
         },
         result: {
           type: String,
-          enum: ["PASS", "FAIL", "On Hold", "Didn’t Attempt"],
+          enum: ["PASS", "FAIL", "On Hold", "Did not Attempt"],
         },
       },
     ],

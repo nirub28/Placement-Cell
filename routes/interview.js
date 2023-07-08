@@ -6,11 +6,10 @@ const interviewController=require('../controllers/interview_controller');
 
 
 router.get('/list', interviewController.showList);
+router.post('/create', interviewController.createInterview);
+router.get('/interview/:id', interviewController.interviewDetail);
+router.post("/update-results", interviewController.updateResults);
 
-
-// router.get('/profile/:id', studentController.profile);
-// router.post('/add', studentController.add);
-// router.get('/delete/:id', studentController.delete);
 
 
 module.exports=router;

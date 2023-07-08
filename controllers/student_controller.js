@@ -1,9 +1,13 @@
 const Student = require("../models/Student");
+const Interview = require('../models/Interview');
+
 
 //student profile
 module.exports.profile = async function(req, res) {
   try {
-    const student = await Student.findById(req.params.id);
+    const student = await Student.findById(req.params.id)
+    .populate("interviews.interview", "company date result");
+
     return res.render('student_profile', {
       title: "Student Profile",
       profile_student: student
