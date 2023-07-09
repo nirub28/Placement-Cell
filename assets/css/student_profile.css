@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(108, 143, 143);
+}
 button{
     background-color: red;
     color: white;
@@ -29,6 +32,26 @@ p{
 }
 .interview-p{
     margin-left: 80px;
-    background-color: red;
+    background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width:400px;
+    height:70px;
 }
+.pass {
+    color: green;
+  }
+  
+  .fail {
+    color: red;
+  }
+  .bold-id{
+    font-weight: 550;
+  }
+  .interview-p div{
+    margin-left: 10px;
+  }
