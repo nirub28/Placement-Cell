@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(108, 143, 143);
+    background-color: rgb(217, 236, 236);
 }
 button{
     background-color: red;
@@ -27,9 +27,6 @@ p{
     margin-left: 10px;
     background-color: green;
 }
-.score-p{
-    margin-left: 80px;
-}
 .interview-p{
     margin-left: 80px;
     background-color: black;
@@ -42,12 +39,13 @@ p{
     width:400px;
     height:70px;
 }
+
 .pass {
     color: green;
   }
   
   .fail {
-    color: red;
+    color: red;  
   }
   .bold-id{
     font-weight: 550;
@@ -55,3 +53,26 @@ p{
   .interview-p div{
     margin-left: 10px;
   }
+
+   /* for form show on click to update  */
+
+  .hidden {
+    display: none;
+  }
+
+  .scores-div{
+    margin-left: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width:400px;
+    height:70px;
+}
+
+.scores-div div{
+    margin-left: 10px;
+}

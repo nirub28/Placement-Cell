@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/student_profile.css">
+<script src="/js/students_profile.js"></script>
 
 <a href="/student/delete/<%= profile_student.id %>"><button>Delete Student</button></a>
 <button class="update-btn">Update Details</button>
@@ -6,12 +7,14 @@
 <p><b>Name:</b> <%= profile_student.name %></p>     
 <p><b>Email:</b> <%= profile_student.email %></p>
 <p><b>College:</b> <%= profile_student.college %></p>
-<p><b>Status:</b> <%= profile_student.status %></p>
+<p><b>Status:</b> <b class="<%= profile_student.status === 'Placed' ? 'pass' : 'fail' %>"><%= profile_student.status %></b></p>
 
 <p><b>Scores:</b></p>
-<p class="score-p"><b>DSA:</b><span><%= profile_student.scores.dsa %></span></p>
-<p class="score-p"><b>WebD:</b><span><%= profile_student.scores.webd %></span></p>
-<p class="score-p"><b>React:</b><span><%= profile_student.scores.react %></span></p>
+<div class="scores-div">
+<div> <b>DSA  &nbsp;  &nbsp; : </b><span><%= profile_student.scores.dsa %></span></div>
+<div> <b>WebD  &nbsp;: </b><span><%= profile_student.scores.webd %></span></div>
+<div> <b>React  &nbsp;  : </b><span><%= profile_student.scores.react %></span></div>
+</div>
 
 <p><b>Interviews:</b></p>
 <% interviews.forEach(function(interview) { %>
@@ -21,3 +24,30 @@
    <div><b class="bold-id">Result&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:</b> <span class="<%= interview.result === 'PASS' ? 'pass' : 'fail' %>"> <%= interview.result %> </span> </div>
   </div>
 <% }); %>
+
+
+
+<!-- Update Details Form -->
+<form id="updateForm" class="hidden" action="/student/update" method="POST">
+  <input type="hidden" name="studentId" value="<%= profile_student.id %>">
+  <label for="status">Status:</label>
+  <select id="status" name="status">
+    <option hidden value="">Select Status</option>
+    <option value="Placed">Placed</option>
+    <option value="Not_Placed">Not Placed</option>
+  </select>
+
+  <label for="dsa">DSA Score:</label>
+  <input type="number" id="dsa" name="dsa">
+
+  <label for="webd">WebD Score:</label>
+  <input type="number" id="webd" name="webd">
+
+  <label for="react">React Score:</label>
+  <input type="number" id="react" name="react">
+
+  <button type="submit">Update</button>
+</form>
+
+
+<script src="/js/students_profile.js"></script>
