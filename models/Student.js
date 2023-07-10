@@ -4,9 +4,6 @@ const mongoose = require("mongoose");
 
 const studentSchema = new mongoose.Schema(
   {
-    batch:{
-      type:Number,
-    },
     name: {
       type: String,
       required: true,
