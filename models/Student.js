@@ -16,6 +16,9 @@ const studentSchema = new mongoose.Schema(
     college: {
       type: String,
     },
+    batch: {
+      type: String,
+    },
     scores: {
       dsa: {
         type: Number,

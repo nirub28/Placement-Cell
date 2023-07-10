@@ -13,6 +13,7 @@ module.exports.get = async function (req, res) {
       header: [
         { id: "studentId", title: "Student ID" },
         { id: "studentName", title: "Student Name" },
+        { id: "studentBatch", title: "Batch" },
         { id: "studentCollege", title: "Student College" },
         { id: "studentStatus", title: "Student Status" },
         { id: "dsaFinalScore", title: "DSA Final Score" },
@@ -31,6 +32,7 @@ module.exports.get = async function (req, res) {
         const rowData = {
           studentId: student.email,
           studentName: student.name,
+          studentBatch: student.batch,
           studentCollege: student.college,
           studentStatus: student.status,
           dsaFinalScore: student.scores.dsa,
