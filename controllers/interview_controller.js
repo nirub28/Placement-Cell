@@ -34,6 +34,8 @@ module.exports.interviewDetail =async function(req,res){
 module.exports.createInterview = async function(req, res) {
   try {
     const { company, date, students } = req.body;
+
+    let studentsArray = Array.isArray(students) ? students : [students]; 
     
     const interview = await Interview.create({
       company: company,
@@ -41,7 +43,7 @@ module.exports.createInterview = async function(req, res) {
       students: students,
     });
 
-    for (const studentId of students) {
+    for (const studentId of studentsArray) {
       const student = await Student.findById(studentId);
       if (student) {
         student.interviews.push({ interview: interview._id });
@@ -49,10 +51,10 @@ module.exports.createInterview = async function(req, res) {
       }
     }
 
-    return res.redirect("/");
+    return res.redirect("/interviews/list");
   } catch (err) {
     console.log("Error in creating interview:", err);
-    return res.redirect("/");
+    return res.redirect("/interviews/list");
   }
 };
 
@@ -90,5 +92,3 @@ module.exports.updateResults = async function(req, res) {
     return res.redirect("/interviews/list");
   }
 };
-
-

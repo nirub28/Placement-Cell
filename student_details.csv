@@ -1,13 +1,10 @@
 Student ID,Student Name,Batch,Student College,Student Status,DSA Final Score,WebD Final Score,React Final Score,Interview Date,Interview Company,Interview Student Result
-niru@gmail.com,Niru,,,Placed,30,30,30,2023-07-22,Acc,FAIL
-niru@gmail.com,Niru,,,Placed,30,30,30,2023-07-16,cdn,On Hold
-niru@gmail.com,Niru,,,Placed,30,30,30,2023-07-30,Mine,
-niru@gmail.com,Niru,,,Placed,30,30,30,2023-08-02,Kindrly,FAIL
-niru@gmail.com,Niru,,,Placed,30,30,30,2023-07-21,Info,FAIL
-keer@gmail.com,kerr,,,Placed,,,,2023-07-15,Tcs,PASS
-keer@gmail.com,kerr,,,Placed,,,,2023-07-22,Acc,FAIL
-keer@gmail.com,kerr,,,Placed,,,,2023-07-16,cdn,On Hold
-keer@gmail.com,kerr,,,Placed,,,,2023-07-30,Mine,
-keer@gmail.com,kerr,,,Placed,,,,2023-08-02,Kindrly,PASS
-keer@gmail.com,kerr,,,Placed,,,,2023-07-21,Info,FAIL
-niranjan@gmail.com,Niranjan,2018,TOCE,Placed,40,40,40,2023-07-21,Info,FAIL
+niru@gmail.com,Niru,2018,TOCE,Placed,90,90,90,2023-07-15,TCS,PASS
+niru@gmail.com,Niru,2018,TOCE,Placed,90,90,90,2023-07-22,Acc,PASS
+niru@gmail.com,Niru,2018,TOCE,Placed,90,90,90,2023-07-19,Nirub,
+keer@gmail.com,Keer,2023,TKR,Placed,85,90,90,2023-07-15,TCS,PASS
+keer@gmail.com,Keer,2023,TKR,Placed,85,90,90,2023-07-22,Acc,On Hold
+keer@gmail.com,Keer,2023,TKR,Placed,85,90,90,2023-07-11,test1,
+xxx@gamil.com,Jeet,2022,XXX,Not_Placed,50,60,48,2023-07-15,TCS,FAIL
+xxx@gamil.com,Jeet,2022,XXX,Not_Placed,50,60,48,2023-07-11,test1,
+xxx@gamil.com,Jeet,2022,XXX,Not_Placed,50,60,48,2023-07-18,test4,
