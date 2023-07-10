@@ -1,15 +1,21 @@
-<p><b>Company Name:</b> <%= interview.company %></p>
-<p><b>Interview Date:</b> <%= interview.date.toLocaleDateString() %></p>
+<link rel="stylesheet" href="/css/interview_details.css">
 
-<h4>Students:</h4>
+
+<p class="company-name"><b>Company Name:</b> <%= interview.company %></p>
+<p class="company-date"><b>Interview Date:</b> <%= interview.date.toLocaleDateString() %></p>
+
+<h4 class="company-name">Students:</h4>
 <form action="/interviews/update-results" method="POST">
   <input type="hidden" name="interviewId" value="<%= interview._id %>">
   <% interview.students.forEach(function(student) { %>
-    <div>
-      <p><b>Name:</b> <%= student.name %></p>
-      <p><b>Email:</b> <%= student.email %></p>
+    <div class="student-div">
+      <div class="student-details">
+      <p ><b>Name:</b> <%= student.name %></p>
+      <p ><b>Email:</b> <%= student.email %></p>
+      </div>
+      <div class="result-div" >
       <% if (!student.result) { %> 
-         <label for="result-<%= student._id %>">Result:</label>
+         <label for="result-<%= student._id %>"><b>Select Result:</b></label>
         <select id="result-<%= student._id %>" name="result-<%= student._id %>">
           <option value="On Hold">On Hold</option>
           <option value="PASS">PASS</option>
@@ -19,7 +25,8 @@
       <% } else { %> 
          <p><b>Result:</b> <%= student.result %></p>
       <% } %>
+      </div>
     </div>
   <% }); %>
-  <button type="submit">Update Results</button>
+  <button class="btn-update" type="submit">Update Results</button>
 </form>  

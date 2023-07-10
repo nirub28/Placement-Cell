@@ -1,6 +1,7 @@
 const Student = require("../models/Student");
 const Interview = require("../models/Interview");
 
+
 //student profile
 module.exports.profile = async function (req, res) {
   try {
@@ -42,9 +43,10 @@ module.exports.add = async function (req, res) {
 
     if (!existingStudent) {
       const newStudent = await Student.create(req.body);
+      req.flash('success', 'Student Added!');
       return res.redirect("/");
     } else {
-      console.log("user with ID already available");
+      req.flash('error', 'user with ID already available');
       return res.redirect("/");
     }
   } catch (err) {
@@ -55,6 +57,7 @@ module.exports.add = async function (req, res) {
 module.exports.delete = async function (req, res) {
   try {
     await Student.deleteOne({ _id: req.params.id });
+    req.flash('success', 'Deleted Student');
     return res.redirect("/");
   } catch (err) {
     console.log("Error in deleting student:", err);
@@ -81,6 +84,7 @@ module.exports.updateDetails = async function (req, res) {
     // Save the updated student
     await student.save();
 
+    req.flash('success', 'Updated Student Details');
     return res.redirect(`/student/profile/${studentId}`); 
   } catch (err) {
     console.log("Error updating student details:", err);

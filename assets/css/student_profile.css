@@ -1,7 +1,7 @@
 body{
     background-color: rgb(217, 236, 236);
 }
-button{
+.delete-student-btn{
     background-color: red;
     color: white;
     width: 120px;
@@ -9,7 +9,7 @@ button{
     margin-top: 20px;
     margin-left: 500px;
 }
-button:hover{
+.delete-student-btn:hover{
     cursor: pointer;
     color: black;
 }
@@ -26,6 +26,14 @@ p{
 .update-btn{
     margin-left: 10px;
     background-color: green;
+    color: white;
+    width: 120px;
+    height: 30px;
+    margin-top: 20px;
+}
+.update-btn:hover{
+  cursor: pointer;
+  color: black;
 }
 .interview-p{
     margin-left: 80px;
@@ -75,4 +83,59 @@ p{
 
 .scores-div div{
     margin-left: 10px;
+}
+
+
+
+.main-div{
+  display: flex;
+  flex-direction: row;
+}
+.student-details-div{
+  width: 50%;
+}
+
+#updateForm{
+  background-color: gray;
+  width: 300px;
+  height:300px;
+  margin-top: 50px;
+  margin-left: 100px;
+  border: 1px solid black;
+}
+.btn-update-score{
+  background-color: green;
+  color: white;
+  height: 30px;
+  width: 100px;
+  margin-left: 170px;
+}
+.update-div{
+  width: 50%;
+  display: flex;
+  flex-direction: column; 
+}
+
+.select-div{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.dsa-div{
+  margin-top: 50px;
+  margin-left: 10px;
+}
+.web-div{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.react-div{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.btn-btn-div{
+  margin-top: 20px;
+}
+.btn-update-score:hover{
+  cursor: pointer;
+  color: black;
 }

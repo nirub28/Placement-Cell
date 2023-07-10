@@ -7,14 +7,14 @@ const User=require('../models/User');
 //connect to startergy and make user name as email and validate pass
 passport.use(new LocalStrategy({
      usernameField:'email',
-     passReqToCallback:true
+     passReqToCallback:true  // to pass the flash msg request
 },
-  async function( req,email,password,done){
+  async function(req, email,password,done){             // req taken to pass flash msg
   const user = await User.findOne({email:email})
         
         if(!user || user.password != password){
-            // req.flash('error', 'Invalid Username/Password');
-            console.log('Invalid Username/Password')
+            req.flash('error', 'Invalid Username/Password');
+            //console.log('Invalid Username/Password')
             return done(null,false);
         }
         return done(null,user);

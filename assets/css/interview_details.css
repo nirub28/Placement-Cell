@@ -1,0 +1,35 @@
+.company-name{
+  margin-left: 200px;
+}
+.company-date{
+    margin-left: 200px;
+}
+.student-div{
+    background-color: black;
+    color: white;
+    width: 500px;
+    height: 100px;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.student-details{
+    margin-left: 10px;
+    width: 50%;
+}
+.result-div{
+    margin-top: 10px;
+    width: 50%;
+}
+.btn-update{
+    margin-left: 580px;
+    background-color: green;
+    color: white;
+    margin-top: 30px;
+    height: 30px;
+}
+.btn-update:hover{
+    cursor: pointer;
+    color: black;
+}

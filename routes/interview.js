@@ -5,7 +5,7 @@ const interviewController=require('../controllers/interview_controller');
 
 
 
-router.get('/list', interviewController.showList);
+router.get('/list', passport.checkAuthentication, interviewController.showList);
 router.post('/create', interviewController.createInterview);
 router.get('/interview/:id', interviewController.interviewDetail);
 router.post("/update-results", interviewController.updateResults);

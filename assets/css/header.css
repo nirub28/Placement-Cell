@@ -11,7 +11,7 @@
 
   .app-name{
     text-decoration: none;
-    color: white;
+    color: white !important;
   }
     .litag a {
       text-decoration: none;
@@ -21,6 +21,11 @@
     .litag a:hover {
       color: black;
       text-decoration: underline; }
+
+    .app-name:hover{ 
+      cursor: pointer;
+      text-decoration: none !important;
+    }  
   
   header {
     background-color: #28379d;

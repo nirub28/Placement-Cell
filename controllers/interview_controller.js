@@ -50,7 +50,8 @@ module.exports.createInterview = async function(req, res) {
         await student.save();
       }
     }
-
+  
+    req.flash('success', 'Interview Created');
     return res.redirect("/interviews/list");
   } catch (err) {
     console.log("Error in creating interview:", err);
@@ -86,9 +87,11 @@ module.exports.updateResults = async function(req, res) {
       }
     }
 
+    req.flash('success', 'Results Updated');
     return res.redirect("/interviews/list");
   } catch (err) {
     console.log("Error in updating interview results:", err);
+    req.flash('error', err);
     return res.redirect("/interviews/list");
   }
 };

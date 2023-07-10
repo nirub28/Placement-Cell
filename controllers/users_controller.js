@@ -41,18 +41,21 @@ module.exports.create= async function(req,res){
 
 module.exports.signIn=function(req,res){
 
-    // if(req.isAuthenticated()){
-    //    return res.redirect('/users/profile')
-    // }
+    if(req.isAuthenticated()){
+      req.flash('success', 'Already logged in!');
+       return res.redirect('/')
+    }
     return res.render('user_sign_in',{
        title:"Sign | In"
     });
  }
 
  module.exports.signUp=function(req,res){
-    // if(req.isAuthenticated()){
-    //    return res.redirect('/users/profile')
-    // }
+
+  if(req.isAuthenticated()){
+    req.flash('success', 'logged in! Logout to signup newly');
+    return res.redirect('/')
+ }
  
     return res.render('user_sign_up',{
        title:"Sign | up"
@@ -61,21 +64,20 @@ module.exports.signIn=function(req,res){
 
  // creating session
  module.exports.createSession=function(req,res){
-   console.log("Logged in Successfully");
-   //req.flash('success', 'Logged in Successfully');
+   //console.log("Logged in Successfully");
+   req.flash('success', 'Logged in Successfully');
      return res.redirect('/');
 }
 
 
 
 module.exports.destroySession=function(req,res){
-   //logout before redirecting this fun given by passport
       
         req.logout(function(err){
          if(err){
-            console.log('Unable to perform logout');
+            req.flash('error', 'Unable to perform logout');
          }
         });
-      console.log('You are loggedOut');
+      req.flash('success', 'You are loggedOut!');
       return res.redirect('/users/sign-in');
    }

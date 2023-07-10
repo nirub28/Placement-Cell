@@ -9,7 +9,7 @@ router.get('/profile/:id', studentController.profile);
 router.post('/add', studentController.add);
 router.get('/delete/:id', studentController.delete);
 router.post('/update', studentController.updateDetails);
-router.get('/download', DownloadCSVcontroller.get);
+router.get('/download', passport.checkAuthentication, DownloadCSVcontroller.get);
 
 
 module.exports=router;
