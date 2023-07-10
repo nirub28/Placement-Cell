@@ -1,4 +1,3 @@
-// DownloadCSVcontroller.js
 const fs = require("fs");
 const csv = require("csv-writer").createObjectCsvWriter;
 const Student = require("../models/Student");
@@ -26,33 +25,24 @@ module.exports.get = async function (req, res) {
     });
 
     // Prepare the data for CSV
-    const data = students.map((student) => {
-      const interviewDates = student.interviews.map((interview) => {
-        const date = interview.interview.date.toISOString().split("T")[0];
-        return date;
+    const data = [];
+    students.forEach((student) => {
+      student.interviews.forEach((interview) => {
+        const rowData = {
+          studentId: student.email,
+          studentName: student.name,
+          studentCollege: student.college,
+          studentStatus: student.status,
+          dsaFinalScore: student.scores.dsa,
+          webDFinalScore: student.scores.webd,
+          reactFinalScore: student.scores.react,
+          interviewDate: interview.interview.date.toISOString().split("T")[0],
+          interviewCompany: interview.interview.company,
+          interviewStudentResult: interview.result,
+        };
+        data.push(rowData);
       });
-      const interviewCompanies = student.interviews.map(
-        (interview) => interview.interview.company
-      );
-      const interviewResults = student.interviews.map(
-        (interview) => interview.result
-      );
-
-    return {
-      studentId: student.email,
-      studentName: student.name,
-      studentCollege: student.college,
-      studentStatus: student.status,
-      dsaFinalScore: student.scores.dsa,
-      webDFinalScore: student.scores.webd,
-      reactFinalScore: student.scores.react,
-      interviewDate: interviewDates.join(", "),
-      interviewCompany: interviewCompanies.join(", "),
-      interviewStudentResult: interviewResults.join(", "),
-    };
-  });
-
-
+    });
 
     // Write the data to CSV
     await csvWriter.writeRecords(data);

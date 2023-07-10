@@ -1,3 +1,8 @@
 Student ID,Student Name,Student College,Student Status,DSA Final Score,WebD Final Score,React Final Score,Interview Date,Interview Company,Interview Student Result
-niru@gmail.com,Niru,,Placed,30,30,30,"2023-07-22, 2023-07-16, 2023-07-30","Acc, cdn, Mine","FAIL, On Hold, "
-keer@gmail.com,kerr,,Not_Placed,50,50,80,"2023-07-15, 2023-07-22, 2023-07-16, 2023-07-30","Tcs, Acc, cdn, Mine","PASS, FAIL, On Hold, "
+niru@gmail.com,Niru,,Placed,30,30,30,2023-07-22,Acc,FAIL
+niru@gmail.com,Niru,,Placed,30,30,30,2023-07-16,cdn,On Hold
+niru@gmail.com,Niru,,Placed,30,30,30,2023-07-30,Mine,
+keer@gmail.com,kerr,,Not_Placed,50,50,80,2023-07-15,Tcs,PASS
+keer@gmail.com,kerr,,Not_Placed,50,50,80,2023-07-22,Acc,FAIL
+keer@gmail.com,kerr,,Not_Placed,50,50,80,2023-07-16,cdn,On Hold
+keer@gmail.com,kerr,,Not_Placed,50,50,80,2023-07-30,Mine,
