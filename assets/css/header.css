@@ -1,109 +1,111 @@
 .div-home {
-    display: flex;
-    justify-content: space-between; }
-  
-  .litag {
-    list-style-type: none; 
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+}
 
-  .app-name{
-    text-decoration: none;
-    color: white !important;
-  }
-    .litag a {
-      text-decoration: none;
-      color: white; 
-      margin-left: 10px;
-    }
-    .litag a:hover {
-      color: black;
-      text-decoration: underline; }
+.litag {
+  list-style-type: none;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
 
-    .app-name:hover{ 
-      cursor: pointer;
-      text-decoration: none !important;
-    }  
-  
-  header {
-    background-color: #28379d;
-    color: white;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .three-lines{
-    width: 30px;
-    height: 30px;
-    color: white;
-    margin-right: 30px;
-  }
-  .three-lines:hover{
-    cursor: pointer;
-    background-color: red;
-    border-radius: 20px;
-    border: 1px solid red;
-  }
+.app-name {
+  text-decoration: none;
+  color: white !important;
+}
+.litag a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+.litag a:hover {
+  color: black;
+  text-decoration: underline;
+}
 
-  .sliding-menu {
-    position: fixed;
-    top: 45px;
-    right: -180px; /* Off-screen */
-    width: 180px;
-    height: 250px;
-    background-color: gray;
-    transition: right 0.3s ease;
-  }
-  
-  .sliding-menu.active {
-    right: 0; /* Slide in */
-  }
-  
-  .litag-name::before{
-    content:"";
-    display:inline-block;
-    height:40px;
-    width:40px;
-    margin-left: -30px;
-    background-size:contain;
-    background-image:url(https://cdn-icons-png.flaticon.com/512/668/668709.png); 
-    }
+.app-name:hover {
+  cursor: pointer;
+  text-decoration: none !important;
+}
 
-    .litag-out::before{
-      content:"";
-      display:inline-block;
-      height:40px;
-      width:40px;
-      margin-left: -30px;
-      background-size:contain;
-      background-image:url(https://cdn-icons-png.flaticon.com/512/7756/7756285.png); 
-      border: 1.5px solid black;
-      border-radius: 30px;
-      }
-      .litag-interview::before{
-        content:"";
-        display:inline-block;
-        height:40px;
-        width:40px;
-        margin-left: -30px;
-        background-size:contain;
-        background-image:url(https://cdn-icons-png.flaticon.com/512/2179/2179306.png); 
-        border: 1.5px solid black;
-        border-radius: 30px;
-        background-color: rgb(245, 79, 79);
-        }
-        .litag-download::before{
-          content:"";
-          display:inline-block;
-          height:40px;
-          width:40px;
-          margin-left: -30px;
-          background-size:contain;
-          background-image:url(https://cdn-icons-png.flaticon.com/512/10486/10486489.png); 
-          border: 1.5px solid black;
-          border-radius: 30px;
-          background-color: rgb(245, 79, 79);
-          }
-  
+header {
+  background-color: #28379d;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.three-lines {
+  width: 30px;
+  height: 30px;
+  color: white;
+  margin-right: 30px;
+}
+.three-lines:hover {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 20px;
+  border: 1px solid red;
+}
+
+.sliding-menu {
+  position: fixed;
+  top: 45px;
+  right: -180px; /* Off-screen */
+  width: 180px;
+  height: 250px;
+  background-color: gray;
+  transition: right 0.3s ease;
+}
+
+.sliding-menu.active {
+  right: 0; /* Slide in */
+}
+
+.litag-name::before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: -30px;
+  background-size: contain;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/668/668709.png);
+}
+
+.litag-out::before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: -30px;
+  background-size: contain;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/7756/7756285.png);
+  border: 1.5px solid black;
+  border-radius: 30px;
+}
+.litag-interview::before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: -30px;
+  background-size: contain;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/2179/2179306.png);
+  border: 1.5px solid black;
+  border-radius: 30px;
+  background-color: rgb(245, 79, 79);
+}
+.litag-download::before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: -30px;
+  background-size: contain;
+  background-image: url(https://cdn-icons-png.flaticon.com/512/10486/10486489.png);
+  border: 1.5px solid black;
+  border-radius: 30px;
+  background-color: rgb(245, 79, 79);
+}

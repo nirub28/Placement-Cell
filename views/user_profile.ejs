@@ -1,8 +1,6 @@
-<link rel="stylesheet" href="/css/user_profile.css">
- 
- 
- <% if(user.id == profile_user.id) {%>
-  <p><b>Name  :</b> <%= profile_user.name %> </p>
-  <p><b>Email :</b> <%= profile_user.email %> </p>
- <%}%>
- 
+<link rel="stylesheet" href="/css/user_profile.css" />
+
+<% if(user.id == profile_user.id) {%>
+<p><b>Name :</b> <%= profile_user.name %></p>
+<p><b>Email :</b> <%= profile_user.email %></p>
+<%}%>

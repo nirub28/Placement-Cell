@@ -1,68 +1,91 @@
-<link rel="stylesheet" href="/css/student_profile.css">
+<link rel="stylesheet" href="/css/student_profile.css" />
 <script src="/js/students_profile.js"></script>
 
-<a href="/student/delete/<%= profile_student.id %>"><button class="delete-student-btn">Delete Student</button></a>
+<a href="/student/delete/<%= profile_student.id %>"
+  ><button class="delete-student-btn">Delete Student</button></a
+>
 <button class="update-btn">Update Details</button>
 
 <div class="main-div">
   <div class="student-details-div">
-<p><b>Name:</b> <%= profile_student.name %></p>     
-<p><b>Email:</b> <%= profile_student.email %></p>
-<p><b>Batch:</b> <%= profile_student.batch %></p>
-<p><b>College:</b> <%= profile_student.college %></p>
-<p><b>Status:</b> <b class="<%= profile_student.status === 'Placed' ? 'pass' : 'fail' %>"><%= profile_student.status %></b></p>
+    <p><b>Name:</b> <%= profile_student.name %></p>
+    <p><b>Email:</b> <%= profile_student.email %></p>
+    <p><b>Batch:</b> <%= profile_student.batch %></p>
+    <p><b>College:</b> <%= profile_student.college %></p>
+    <p>
+      <b>Status:</b>
+      <b class="<%= profile_student.status === 'Placed' ? 'pass' : 'fail' %>"
+        ><%= profile_student.status %></b
+      >
+    </p>
 
-<p><b>Scores:</b></p>
-<div class="scores-div">
-<div> <b>DSA  &nbsp;  &nbsp; : </b><span><%= profile_student.scores.dsa %></span></div>
-<div> <b>WebD  &nbsp;: </b><span><%= profile_student.scores.webd %></span></div>
-<div> <b>React  &nbsp;  : </b><span><%= profile_student.scores.react %></span></div>
-</div>
+    <p><b>Scores:</b></p>
+    <div class="scores-div">
+      <div>
+        <b>DSA &nbsp; &nbsp; : </b
+        ><span><%= profile_student.scores.dsa %></span>
+      </div>
+      <div>
+        <b>WebD &nbsp;: </b><span><%= profile_student.scores.webd %></span>
+      </div>
+      <div>
+        <b>React &nbsp; : </b><span><%= profile_student.scores.react %></span>
+      </div>
+    </div>
 
-<p><b>Interviews:</b></p>
-<% interviews.forEach(function(interview) { %>
-  <div class="interview-p">
-    <div><b class="bold-id">Company Name &nbsp;:</b> <%= interview.company %></div>
-   <div><b class="bold-id">Date of Interview:</b> <%= interview.date.toLocaleDateString() %></div>
-   <div><b class="bold-id">Result&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:</b> <span class="<%= interview.result === 'PASS' ? 'pass' : 'fail' %>"> <%= interview.result %> </span> </div>
-  </div>
-<% }); %>
-</div>
-
-
-
-<!-- Update Details Form -->
-<div class="update-div">
-<form id="updateForm" class="hidden" action="/student/update" method="POST">
-  <input type="hidden" name="studentId" value="<%= profile_student.id %>">
-  <div class="select-div"><label for="status"><b>Status &emsp;&emsp;&ensp;:</b></label>
-  <select id="status" name="status">
-    <option hidden value="">Select Status</option>
-    <option value="Placed">Placed</option>
-    <option value="Not_Placed">Not Placed</option>
-  </select>
- </div>
-
-   <div class="dsa-div">
-  <label for="dsa"><b>DSA Score &nbsp;&nbsp;:</b></label>
-  <input type="number" id="dsa" name="dsa">
-   </div>
-
-  <div class="web-div">
-  <label for="webd"><b>WebD Score:</b></label>
-  <input type="number" id="webd" name="webd">
- </div>
-
-   <div class="react-div">
-  <label for="react"><b>React Score&nbsp;:</b></label>
-  <input type="number" id="react" name="react">
+    <p><b>Interviews:</b></p>
+    <% interviews.forEach(function(interview) { %>
+    <div class="interview-p">
+      <div>
+        <b class="bold-id">Company Name &nbsp;:</b> <%= interview.company %>
+      </div>
+      <div>
+        <b class="bold-id">Date of Interview:</b> <%=
+        interview.date.toLocaleDateString() %>
+      </div>
+      <div>
+        <b class="bold-id">Result&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;:</b>
+        <span class="<%= interview.result === 'PASS' ? 'pass' : 'fail' %>">
+          <%= interview.result %>
+        </span>
+      </div>
+    </div>
+    <% }); %>
   </div>
 
-   <div class="btn-btn-div">
-  <button class="btn-update-score" type="submit">Update</button>
+  <!-- Update Details Form -->
+  <div class="update-div">
+    <form id="updateForm" class="hidden" action="/student/update" method="POST">
+      <input type="hidden" name="studentId" value="<%= profile_student.id %>" />
+      <div class="select-div">
+        <label for="status"><b>Status &emsp;&emsp;&ensp;:</b></label>
+        <select id="status" name="status">
+          <option hidden value="">Select Status</option>
+          <option value="Placed">Placed</option>
+          <option value="Not_Placed">Not Placed</option>
+        </select>
+      </div>
+
+      <div class="dsa-div">
+        <label for="dsa"><b>DSA Score &nbsp;&nbsp;:</b></label>
+        <input type="number" id="dsa" name="dsa" />
+      </div>
+
+      <div class="web-div">
+        <label for="webd"><b>WebD Score:</b></label>
+        <input type="number" id="webd" name="webd" />
+      </div>
+
+      <div class="react-div">
+        <label for="react"><b>React Score&nbsp;:</b></label>
+        <input type="number" id="react" name="react" />
+      </div>
+
+      <div class="btn-btn-div">
+        <button class="btn-update-score" type="submit">Update</button>
+      </div>
+    </form>
   </div>
-</form>
-</div>
 </div>
 
 <script src="/js/students_profile.js"></script>

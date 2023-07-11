@@ -1,7 +1,6 @@
 const Student = require("../models/Student");
 const Interview = require("../models/Interview");
 
-
 //student profile
 module.exports.profile = async function (req, res) {
   try {
@@ -35,6 +34,7 @@ module.exports.profile = async function (req, res) {
   }
 };
 
+//add new student
 module.exports.add = async function (req, res) {
   try {
     const existingStudent = await Student.findOne({
@@ -43,10 +43,10 @@ module.exports.add = async function (req, res) {
 
     if (!existingStudent) {
       const newStudent = await Student.create(req.body);
-      req.flash('success', 'Student Added!');
+      req.flash("success", "Student Added!");
       return res.redirect("/");
     } else {
-      req.flash('error', 'user with ID already available');
+      req.flash("error", "user with ID already available");
       return res.redirect("/");
     }
   } catch (err) {
@@ -54,10 +54,11 @@ module.exports.add = async function (req, res) {
   }
 };
 
+//delete a student
 module.exports.delete = async function (req, res) {
   try {
     await Student.deleteOne({ _id: req.params.id });
-    req.flash('success', 'Deleted Student');
+    req.flash("success", "Deleted Student");
     return res.redirect("/");
   } catch (err) {
     console.log("Error in deleting student:", err);
@@ -65,6 +66,8 @@ module.exports.delete = async function (req, res) {
   }
 };
 
+
+// update student details
 module.exports.updateDetails = async function (req, res) {
   try {
     const { studentId, status, dsa, webd, react } = req.body;
@@ -84,8 +87,8 @@ module.exports.updateDetails = async function (req, res) {
     // Save the updated student
     await student.save();
 
-    req.flash('success', 'Updated Student Details');
-    return res.redirect(`/student/profile/${studentId}`); 
+    req.flash("success", "Updated Student Details");
+    return res.redirect(`/student/profile/${studentId}`);
   } catch (err) {
     console.log("Error updating student details:", err);
     return res.status(500).send("Internal Server Error");

@@ -1,4 +1,4 @@
-const Interview=require('../models/Interview');
+const Interview = require("../models/Interview");
 
 const mongoose = require("mongoose");
 
@@ -32,7 +32,7 @@ const studentSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["","Placed", "Not_Placed"],
+      enum: ["", "Placed", "Not_Placed"],
     },
     interviews: [
       {

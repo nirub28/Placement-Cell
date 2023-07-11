@@ -1,23 +1,37 @@
-<link rel="stylesheet" href="/css/interview.css">
+<link rel="stylesheet" href="/css/interview.css" />
 
 <div class="interview-div">
   <div class="form-interview">
     <form action="/interviews/create" method="POST">
       <h3>Create an Interview</h3>
       <div class="interview-name">
-        <label for="company"><b>Company Name  &nbsp;:</b></label>
-        <input type="text" id="company" name="company" placeholder="Enter Company Name" required>
+        <label for="company"><b>Company Name &nbsp;:</b></label>
+        <input
+          type="text"
+          id="company"
+          name="company"
+          placeholder="Enter Company Name"
+          required
+        />
       </div>
       <div class="interview-date">
         <label for="date"><b>Date of Interview:</b></label>
-        <input type="date" id="date" name="date" placeholder="Date of Interview" required>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          placeholder="Date of Interview"
+          required
+        />
       </div>
       <div class="interview-students-list">
         <label for="students"><b>Students &emsp;&emsp;&emsp;&nbsp;:</b></label>
         <select id="students" name="students" multiple>
-            <% all_students.forEach(function(student) { %>
-                <option value="<%= student._id %>"><%= student.name %> (<%= student.email %>)</option>
-              <% }); %>
+          <% all_students.forEach(function(student) { %>
+          <option value="<%= student._id %>">
+            <%= student.name %> (<%= student.email %>)
+          </option>
+          <% }); %>
         </select>
       </div>
       <button class="interview-btn" type="submit">Create Interview</button>
@@ -25,12 +39,14 @@
   </div>
 
   <div class="interview-list">
-    <section>  
+    <section>
       <h4>Interviews List</h4>
       <% for (interview of all_interviews) { %>
-        <p>
-          <a href="/interviews/interview/<%= interview._id %>"><%= interview.company %></a>
-        </p>
+      <p>
+        <a href="/interviews/interview/<%= interview._id %>"
+          ><%= interview.company %></a
+        >
+      </p>
       <% } %>
     </section>
   </div>

@@ -1,37 +1,60 @@
-<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/home.css" />
 
 <% if(locals.user) {%>
 
-   <div class="home-div">
+<div class="home-div">
+  <div id="form-div">
+    <h3>Add New Student</h3>
+    <form id="form-container" action="/student/add" method="POST">
+      <div id="input-name">
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter student name"
+          required
+        />
+      </div>
+      <div id="input-email">
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter student Email"
+          required
+        />
+      </div>
+      <div id="input-college">
+        <input
+          type="text"
+          name="college"
+          placeholder="Enter student College"
+          required
+        />
+      </div>
+      <div id="input-batch">
+        <input
+          type="text"
+          name="batch"
+          placeholder="Enter student batch(year)"
+          required
+        />
+      </div>
+      <input id="input-add" type="submit" value="Add Student" />
+    </form>
+  </div>
 
-   <div id="form-div">
-      <h3>Add New Student</h3>
-      <form id="form-container" action="/student/add" method="POST">
-       <div id="input-name">  <input type="text" name="name" placeholder="Enter student name" required> </div>
-       <div id="input-email">  <input type="email" name="email" placeholder="Enter student Email" required> </div>
-       <div id="input-college">  <input type="text" name="college" placeholder="Enter student College" required> </div>
-       <div id="input-batch">  <input type="text" name="batch" placeholder="Enter student batch(year)" required> </div>
-         <input id="input-add" type="submit" value="Add Student">
-     </form>
-   </div>
-
-
-   
-   <section id="students-all">
-      <h4>Students List</h4>
-      <%for(student of all_students) {%>
-          <p>
-                <a href="/student/profile/<%= student._id %>"><%= student.name %></a>
-          </p>
-     <% } %>
-
-
-</section>
-
+  <section id="students-all">
+    <h4>Students List</h4>
+    <%for(student of all_students) {%>
+    <p>
+      <a href="/student/profile/<%= student._id %>"><%= student.name %></a>
+    </p>
+    <% } %>
+  </section>
 </div>
 
-<%}%>
-
-<% if(!locals.user) {%>
-<h2 class="check-login"><p>Login to see the details!</p><a class="a-class" href="/users/sign-in">SignIN</a></h2>
+<%}%> <% if(!locals.user) {%>
+<h2 class="check-login">
+  <p>Login to see the details!</p>
+  <a class="a-class" href="/users/sign-in">SignIN</a>
+</h2>
 <%}%>

@@ -59,7 +59,7 @@ module.exports.get = async function (req, res) {
     // Stream the CSV file to the response
     const fileStream = fs.createReadStream("student_details.csv");
     fileStream.pipe(res);
-    req.flash('success', "Downloaded Data");
+    req.flash("success", "Downloaded Data");
   } catch (err) {
     console.log("Error in generating CSV:", err);
     res.status(500).send("Internal Server Error");

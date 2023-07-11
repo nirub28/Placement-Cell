@@ -1,8 +1,6 @@
-const updateBtn = document.querySelector('.update-btn');
-const updateForm = document.getElementById('updateForm');
+const updateBtn = document.querySelector(".update-btn");
+const updateForm = document.getElementById("updateForm");
 
-console.log('working');
-
-updateBtn.addEventListener('click', () => {
-  updateForm.classList.toggle('hidden');
+updateBtn.addEventListener("click", () => {  // to hide update form
+  updateForm.classList.toggle("hidden");
 });

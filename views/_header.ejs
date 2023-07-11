@@ -1,44 +1,53 @@
-<link rel="stylesheet" href="/css/header.css">
+<link rel="stylesheet" href="/css/header.css" />
 
 <header>
-    <h2>&nbsp;&nbsp;<a class="app-name" href="/">CDN Placement Cell</a></h2>
-    <ul>
-        
-               <% if(locals.user) { %>
-                <div class="div-home">
-                    <img class="three-lines" src="https://cdn-icons-png.flaticon.com/128/11081/11081623.png" alt="icons"/>
-        
-                 <div class="sliding-menu">
-                    <ul>
-                       <li class="litag litag-name">
-                        <b>
-                          <a class="profile-tag" href="/users/profile/<%= locals.user.id %>">
-                            <%= user.name %>
-                          </a>
-                        </b>
-                      </li>
-                      <li class="litag litag-interview">
-                        <b><a href="/interviews/list">Interviews</a></b>
-                      </li>
-                      <li class="litag litag-download">
-                        <b><a href="/student/download">Download Data</a></b>
-                      </li>
-                      <li class="litag litag-out">
-                        <b><a href="/users/sign-out">Sign Out</a></b>
-                      </li>
-                     
-                    </ul>
-                  </div>
-            
-            
-            </div>
-               <%} else {%>
-                <div class="div-home">              
-                <li class="litag"><b><a href="/users/sign-in">Sign In</a></b></li>&nbsp;&nbsp;&nbsp;&nbsp;
-                <li class="litag"><b><a href="/users/sign-up">Sign Up</a></b></li>&nbsp;&nbsp;
-                </div> 
-               <%}%>
-    </ul>
+  <h2>&nbsp;&nbsp;<a class="app-name" href="/">CDN Placement Cell</a></h2>
+  <ul>
+    <% if(locals.user) { %>
+    <div class="div-home">
+      <img
+        class="three-lines"
+        src="https://cdn-icons-png.flaticon.com/128/11081/11081623.png"
+        alt="icons"
+      />
+
+      <div class="sliding-menu">
+        <ul>
+          <li class="litag litag-name">
+            <b>
+              <a
+                class="profile-tag"
+                href="/users/profile/<%= locals.user.id %>"
+              >
+                <%= user.name %>
+              </a>
+            </b>
+          </li>
+          <li class="litag litag-interview">
+            <b><a href="/interviews/list">Interviews</a></b>
+          </li>
+          <li class="litag litag-download">
+            <b><a href="/student/download">Download Data</a></b>
+          </li>
+          <li class="litag litag-out">
+            <b><a href="/users/sign-out">Sign Out</a></b>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <%} else {%>
+    <div class="div-home">
+      <li class="litag">
+        <b><a href="/users/sign-in">Sign In</a></b>
+      </li>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <li class="litag">
+        <b><a href="/users/sign-up">Sign Up</a></b>
+      </li>
+      &nbsp;&nbsp;
+    </div>
+    <%}%>
+  </ul>
 </header>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -1,82 +1,76 @@
 .interview-div {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 100px;
-  }
-  
-  .form-interview {
-    flex: 1;
-    margin-right: 130px;
-    background-color: #808080;
-    margin-top: 20px;
-    width: 100px;
-    height: 300px;
-  }
-  
-  .interview-list {
-    flex: 1;
-    border-left: 1px solid black;
-    padding-left: 50px;
-  }
-  
-
-  #students option {
-    display: none;
-  }
-  
-  /* Show the dropdown options when it is clicked */
-  #students:focus option {
-    display: block;
-  }
-
-  .interview-name{
-      margin-left: 50px;
-  }
-
-  h3{
-    margin-left: 150px;
-  }
-  .interview-date {
-    padding-top: 20px;
-    margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
 }
 
-.interview-date
-      input {
-    width: 170px;
-}
-.interview-students-list{
-    padding-top: 20px; 
-    margin-left: 50px; 
+.form-interview {
+  flex: 1;
+  margin-right: 130px;
+  background-color: #808080;
+  margin-top: 20px;
+  width: 100px;
+  height: 300px;
 }
 
+.interview-list {
+  flex: 1;
+  border-left: 1px solid black;
+  padding-left: 50px;
+}
 
-.interview-btn{
-    margin-top: 20px;
-    margin-left: 280px;
-    background-color: green;
-    color: white;
-    height: 40px;
+#students option {
+  display: none;
+}
 
+/* Show the dropdown options when it is clicked */
+#students:focus option {
+  display: block;
 }
-.interview-btn:hover{
-    cursor: pointer;
-    background-color: green;
-    color: black;
-    
-}
-input{
-    border: 1.5px solid black;
-}
-select{
-    border: 1.5px solid black;
 
+.interview-name {
+  margin-left: 50px;
 }
-a{
+
+h3 {
+  margin-left: 150px;
+}
+.interview-date {
+  padding-top: 20px;
+  margin-left: 50px;
+}
+
+.interview-date input {
+  width: 170px;
+}
+.interview-students-list {
+  padding-top: 20px;
+  margin-left: 50px;
+}
+
+.interview-btn {
+  margin-top: 20px;
+  margin-left: 280px;
+  background-color: green;
+  color: white;
+  height: 40px;
+}
+.interview-btn:hover {
+  cursor: pointer;
+  background-color: green;
+  color: black;
+}
+input {
+  border: 1.5px solid black;
+}
+select {
+  border: 1.5px solid black;
+}
+a {
   text-decoration: none;
   color: black;
 }
-a:hover{
+a:hover {
   cursor: pointer;
   text-decoration: underline;
   color: gray;
