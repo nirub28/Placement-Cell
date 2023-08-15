@@ -1,6 +1,6 @@
 h1 {
   color: #333;
-  margin-left: 550px;
+  margin-left: 480px;
 }
 
 form {
@@ -35,4 +35,21 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.stud{
+  margin-left: 35%;
+  margin-top: 50px;
+  font-size: x-large;
+  font-weight: bold;
+}
+.a-class{
+  margin-left: 45%;
+  color: red;
+  font-size: large;
+  text-decoration: none;
+  font-weight: bold;
+}
+.a-class:hover{
+  text-decoration: underline;
 }

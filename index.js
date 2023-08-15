@@ -43,7 +43,7 @@ app.use(
 
     store: new MongoStore(
       {
-        mongoUrl: "mongodb+srv://nirub:nirub283@cluster0.ye8q8b0.mongodb.net/demoDB?retryWrites=true&w=majority",
+        mongoUrl: "mongodb://127.0.0.1:27017/placement_development",
         autoremove: "disabled",
       },
       function (err) {
